@@ -9,67 +9,97 @@
 
     /* Colors
     
-    ==== Font Colors ====
+    ==== Font Colors ==================
             heavy font color:   #404040
             light font color:   #808080
-    =====================
+    ===================================
 
-    ==== Section Colors ====
-        Background:         #ffffff
-        Jumbotron:          #f1f4f5
-        Footer:             #2d2d30
-    ========================
+    ==== Section Colors ===============
+            Background:         #ffffff
+            Jumbotron:          #f1f4f5
+            Footer:             #2d2d30
+    ===================================
 
-    ==== Accessorie Colors ====
-        button color:       #ef5f60
-    ===========================
+    ==== Accessorie Colors ============
+            button color:       #ef5f60
+    ==================================
    
     */
 
-    
-    /* 
-    ====================
-    === Header style ===
-    ====================
-    */
+
+/* 
+====================
+=== Global Style ===
+====================
+*/
+
+
+body {
+    font-family: 'Average Sans', sans-serif;
+    color: #808080;
+}
+
+
+/* 
+====================
+=== Header style ===
+====================
+*/
+
+nav, nav ul li a {
+    font-family: 'Barlow Condensed', sans-serif;
+    color: #404040;
+    font-weight: 550;
+    text-transform: uppercase;
+    background-color: #ffffff;
+    display: block;
+}
+nav ul li a:hover {
+    color: #808080;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#32404040' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+  
+.navbar-toggler {
+    border-color: #32404040;
+} 
+
+/* 
+=====================
+=== Welcome Style ===
+=====================
+*/
+
+
+/* 
+=======================
+=== Portfolio Style ===
+=======================
+*/
+
+
+
+/* 
+======================
+=== Services Style ===
+======================
+*/
 
 
 
 
-    /* 
-    =====================
-    === Welcome Style ===
-    =====================
-    */
-
-
-    /* 
-    =======================
-    === Portfolio Style ===
-    =======================
-    */
+/* 
+=====================
+=== Journal Style ===
+=====================
+*/
 
 
 
-    /* 
-    ======================
-    === Services Style ===
-    ======================
-    */
-
-
-
-
-    /* 
-    =====================
-    === Journal Style ===
-    =====================
-    */
-
-
-
-    /* 
-    ====================
-    === Footer Style ===
-    ====================
-    */
+/* 
+====================
+=== Footer Style ===
+====================
+*/
