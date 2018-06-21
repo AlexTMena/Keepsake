@@ -35,7 +35,7 @@
 
 
 body {
-    font-family: 'Average Sans', sans-serif;
+    font-family: 'Barlow Condensed', sans-serif;
     color: #808080;
 }
 
@@ -43,6 +43,10 @@ h3 em {
     color: #ef5f60;
 }
 
+h3 {
+    text-transform: uppercase;
+    color: #404040;
+}
 /* 
 ====================
 === Header style ===
@@ -115,12 +119,13 @@ nav ul li a:hover {
 
 .recruit-container h3 {
     color: #404040;
+    text-transform: uppercase;
 }
 
 .recruit-container button {
     color: #ffffff;
     background-color: #ef5f60;
-    
+    border-radius: 0;    
 }
 /* 
 ======================
@@ -128,19 +133,76 @@ nav ul li a:hover {
 ======================
 */
 
+.services-container {
+    padding: 10px 0;
+    font-family: 'Barlow Condensed', sans-serif;
+}
 
+.services-container h3 {
+    color: #404040;
+    padding: 0;
+    text-transform: uppercase;
+}
 
+.services-container .row {
+    padding: 50px 10px;
+}
 
+.services-container .services-logo-container {
+    background-color: #f1f4f5;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.services-container h4 {
+    padding: 20px 0 0 0;
+    color: #404040;
+}
 /* 
 =====================
 === Journal Style ===
 =====================
 */
 
+.journal-container {
+    padding: 10px 0px;
+}
 
+.journal-container .row {
+    padding: 30px 0;
+}
+
+.journal-container img {
+    padding: 0 10px 0 0 ;
+}
+
+.journal-entry-container {
+    padding: 0 0 10px;
+}
+
+.date-published {
+    text-transform: uppercase;
+}
+.journal-container h6 {
+    color: #404040;
+    text-transform: uppercase;
+}
 
 /* 
 ====================
 === Footer Style ===
 ====================
 */
+
+.footer-container {
+    background-color: #2d2d30;
+}
+
+.footer-container img {
+    padding: 0 2px;
+}
+
+.footer-content {
+    padding: 20px 0;
+}
