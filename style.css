@@ -129,7 +129,6 @@ nav ul li a:hover {
         }
 
         .portfolio-container .img-fluid {
-            width: 100%;
             height: 100%;
             padding: 5px;
         }
@@ -164,7 +163,7 @@ nav ul li a:hover {
 .services-container {
     padding: 10px 0;
     font-family: 'Barlow Condensed', sans-serif;
-    height: 500px;
+    min-height: 500px;
 }
 
 .services-container h3 {
