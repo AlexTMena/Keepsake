@@ -90,43 +90,71 @@ nav ul li a:hover {
 =======================
 */
 
-.portfolio-filter {
-    font-family: 'Barlow Condensed', sans-serif;
-    padding: 10px 0;
-}
+    /* =====================
+    === Filter Option ===
+    ===================== */
+        .portfolio-filter {
+            font-family: 'Barlow Condensed', sans-serif;
+            padding: 10px 0;
+        }
 
-.portfolio-filter button {
-    background-color: #ef5f60;
-    color: #ffffff;
-    border-radius: 0;
-}
+        .portfolio-filter button {
+            background-color: #ef5f60;
+            color: #ffffff;
+            border-radius: 0;
+            width: 158px;
+        }
 
-.portfolio-container {
-    padding: 10px 0;
-}
+        .dropdown-menu {
+            border-radius: 0;
+            cursor: pointer;
+        }
 
-.portfolio-container .img-fluid {
-    width: 100%;
-    height: 100%;
-    padding: 5px;
-}
+        .dropdown-menu .dropdown-item:active {
+            background: #808080;
+            color: #ffffff !important;
+        }
 
-.recruit-container {
-    padding: 10px 0;
-    font-family: 'Barlow Condensed', sans-serif;
+        .dropdown-menu .active {
+            background: #ef5f60;
+            color: #ffffff !important;
+        }
+
+    /* =========================
+    === Portfolio Gallery ===
+    ========================= */
+
+        .portfolio-container {
+            padding: 10px 0;
+        }
+
+        .portfolio-container .img-fluid {
+            width: 100%;
+            height: 100%;
+            padding: 5px;
+        }
     
-}
+    /* ======================
+    === Recruit button ===
+    ====================== */
 
-.recruit-container h3 {
-    color: #404040;
-    text-transform: uppercase;
-}
+        .recruit-container {
+            padding: 10px 0;
+            font-family: 'Barlow Condensed', sans-serif;
+            
+        }
 
-.recruit-container button {
-    color: #ffffff;
-    background-color: #ef5f60;
-    border-radius: 0;    
-}
+        .recruit-container h3 {
+            color: #404040;
+            text-transform: uppercase;
+        }
+
+        .recruit-container button {
+            color: #ffffff;
+            background-color: #ef5f60;
+            border-radius: 0;    
+        }
+    
 /* 
 ======================
 === Services Style ===
@@ -136,6 +164,7 @@ nav ul li a:hover {
 .services-container {
     padding: 10px 0;
     font-family: 'Barlow Condensed', sans-serif;
+    height: 500px;
 }
 
 .services-container h3 {
@@ -159,6 +188,13 @@ nav ul li a:hover {
     padding: 20px 0 0 0;
     color: #404040;
 }
+
+.services-logo-container:hover {
+    width: 150px;
+    height: 150px;
+    font-size: 20px;
+}
+
 /* 
 =====================
 === Journal Style ===
@@ -174,7 +210,7 @@ nav ul li a:hover {
 }
 
 .journal-container img {
-    padding: 0 10px 0 0 ;
+    padding: 10px;
 }
 
 .journal-entry-container {

@@ -20,7 +20,7 @@
 
     <!-- navigation bar -->
 
-    <div class="container">
+    <div id="home" class="container">
         <nav class="navbar navbar-expand-md">
             <a href="#" class="navbar-brand"><img src="images/keepsake-logo.png"></a>
             <button class="navbar-toggler" data-toggle="collapse" data-target="#navcollapse">
@@ -43,7 +43,7 @@
     <!-- Welcome Introduction -->
 
     <div class="container-fluid jumbotron">
-        <div id="home" class="container">
+        <div class="container">
             <h1>We’re Keepsake, a digital & branding agency</h1>
             <lead>Specializing in web design, poster, motion video, based in London. We love to turn ideas into beautiful things.</lead>
         </div>
@@ -61,22 +61,30 @@
                 <h3>Our Awesome Works <em>- -</em></h3>
             </div>
             <div class="col-md-6 text-md-right col-sm-12 text-center">
-                <button class="btn">Filter Portfolio</button>
+                <button class="btn" type="button" id="filterOption" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Filter Portfolio
+                </button>
+                <div class="dropdown-menu" aria-labelledby="filterOption">
+                    <a id="showAll" class="dropdown-item" onclick="filterAll()">All</a>
+                    <a id="showPrintDesign" class="dropdown-item" onclick="filterPrintDesign()">Print Design</a>
+                    <a id="showLogoDesign" class="dropdown-item" onclick="filterLogoDesign()">Logo Design</a>
+                    <a id="showWebDesign" class="dropdown-item" onclick="filterWebDesign()">Web Design</a>
+                </div>
             </div>
         </div>
 
         <!-- Portfolio sample -->
         
         <div class="portfolio-container row">
-            <img class="img-fluid col-sm-12 col-md-4" src="images/portfolio-1.jpg">
-            <img class="img-fluid col-sm-12 col-md-4" src="images/portfolio-2.jpg">
-            <img class="img-fluid col-sm-12 col-md-4" src="images/portfolio-3.jpg">
-            <img class="img-fluid col-sm-12 col-md-4" src="images/portfolio-4.jpg">
-            <img class="img-fluid col-sm-12 col-md-4" src="images/portfolio-5.jpg">
-            <img class="img-fluid col-sm-12 col-md-4" src="images/portfolio-6.jpg">
-            <img class="img-fluid col-sm-12 col-md-4" src="images/portfolio-7.jpg">
-            <img class="img-fluid col-sm-12 col-md-4" src="images/portfolio-8.jpg">
-            <img class="img-fluid col-sm-12 col-md-4" src="images/portfolio-9.jpg">
+            <img class="img-fluid col-sm-12 col-md-4 print-design" src="images/portfolio-1.jpg">
+            <img class="img-fluid col-sm-12 col-md-4 logo-design" src="images/portfolio-2.jpg">
+            <img class="img-fluid col-sm-12 col-md-4 print-design" src="images/portfolio-3.jpg">
+            <img class="img-fluid col-sm-12 col-md-4 print-design" src="images/portfolio-4.jpg">
+            <img class="img-fluid col-sm-12 col-md-4 web-design" src="images/portfolio-5.jpg">
+            <img class="img-fluid col-sm-12 col-md-4 print-design" src="images/portfolio-6.jpg">
+            <img class="img-fluid col-sm-12 col-md-4 logo-design" src="images/portfolio-7.jpg">
+            <img class="img-fluid col-sm-12 col-md-4 web-design" src="images/portfolio-8.jpg">
+            <img class="img-fluid col-sm-12 col-md-4 logo-desog" src="images/portfolio-9.jpg">
         </div>
 
         <!-- Recruit -->
@@ -90,58 +98,61 @@
     
     <!-- Services -->
 
-    <div class="container services-container">
-        <h3>What do we do <em>- -</em></h3>
-        <lead>Maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</lead>
+    <div class="container">
 
-        <div class="row">
-            
-            <div class="col-sm-12 col-md-6 col-lg-3 text-center">
-                <div class="logo-container">
-                    <div class="d-flex justify-content-center">
+        <div class="services-container">
+            <h3>What do we do <em>- -</em></h3>
+            <lead>Maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</lead>
+
+            <div class="row">
+                
+                <div class="col-sm-12 col-md-6 col-lg-3 text-center">
+                    <div class="logo-container">
+                        <div class="d-flex justify-content-center">
+                                <div class="services-logo-container d-flex justify-content-center align-items-center">
+                                <img src="images/logo-1.png">
+                            </div>
+                        </div>
+                        <h4>Web Design</h4>
+                        <p>Donec elit non mi porta gravida eureget metus. Aenean eu leo quam. Pellentesque ornare sem por quam venenatis vestibulum.</p>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-3 text-center">
+                    <div class="logo-container">
+                        <div class="d-flex justify-content-center">
                             <div class="services-logo-container d-flex justify-content-center align-items-center">
-                            <img src="images/logo-1.png">
+                                <img src="images/logo 2.png">
+                            </div>
                         </div>
+                        <h4>Motion Video</h4>
+                        <p>Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur.</p>
                     </div>
-                    <h4>Web Design</h4>
-                    <p>Donec elit non mi porta gravida eureget metus. Aenean eu leo quam. Pellentesque ornare sem por quam venenatis vestibulum.</p>
                 </div>
-            </div>
 
-            <div class="col-sm-12 col-md-6 col-lg-3 text-center">
-                <div class="logo-container">
-                    <div class="d-flex justify-content-center">
-                        <div class="services-logo-container d-flex justify-content-center align-items-center">
-                            <img src="images/logo 2.png">
+
+                <div class="col-sm-12 col-md-6 col-lg-3 text-center">
+                    <div class="logo-container">
+                        <div class="d-flex justify-content-center">
+                            <div class="services-logo-container d-flex justify-content-center align-items-center">
+                                <img src="images/logo-3.png">
+                            </div>
                         </div>
+                        <h4>Print Design</h4>
+                        <p>Maecenas sed diam eget risus varius blandit amet non magna. Nullam id dolor id nibh ultricies vehiculaelit praesent commodo.</p>
                     </div>
-                    <h4>Motion Video</h4>
-                    <p>Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur.</p>
                 </div>
-            </div>
 
-
-            <div class="col-sm-12 col-md-6 col-lg-3 text-center">
-                <div class="logo-container">
-                    <div class="d-flex justify-content-center">
-                        <div class="services-logo-container d-flex justify-content-center align-items-center">
-                            <img src="images/logo-3.png">
+                <div class="col-sm-12 col-md-6 col-lg-3 text-center">
+                    <div class="logo-container">
+                        <div class="d-flex justify-content-center">
+                            <div class="services-logo-container d-flex justify-content-center align-items-center">
+                                <img src="images/logo-4.png">
+                            </div>
                         </div>
+                        <h4>Illustration</h4>
+                        <p>Cum sociis natoque penatibus et  dis parturient montes, nascetur ridiculus mus. Morbi leo risus, porta ac consectetur ac at.</p>
                     </div>
-                    <h4>Print Design</h4>
-                    <p>Maecenas sed diam eget risus varius blandit amet non magna. Nullam id dolor id nibh ultricies vehiculaelit praesent commodo.</p>
-                </div>
-            </div>
-
-            <div class="col-sm-12 col-md-6 col-lg-3 text-center">
-                <div class="logo-container">
-                    <div class="d-flex justify-content-center">
-                        <div class="services-logo-container d-flex justify-content-center align-items-center">
-                            <img src="images/logo-4.png">
-                        </div>
-                    </div>
-                    <h4>Illustration</h4>
-                    <p>Cum sociis natoque penatibus et  dis parturient montes, nascetur ridiculus mus. Morbi leo risus, porta ac consectetur ac at.</p>
                 </div>
             </div>
         </div>
@@ -152,55 +163,55 @@
 
     <!-- Journal -->
 
-    <div id="journal" class="container journal-container">
-        <h3>From the Journal <em>- -</em></h3>
-        <lead>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla.</lead>
-    
-        <div class="row">
-            <div class="journal-entry-container col-sm-12 col-lg-6">
-                <img class="float-left" src="images/post-1.jpg">
-                <small class="date-published">Oct 13, 2014  /  ıdentity</small>
-                <h6>Sollicitudin Tortor Inceptos</h4>
-                <small>Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh.</small>
-            </div>
-
-            <div class="journal-entry-container col-sm-12 col-lg-6">
-                <img class="float-left" src="images/post-2.jpg">
-                <small class="date-published">Oct 23, 2014  /  Brandıng</small>
-                <h6>Amet Inceptos Fringilla Fusce</h4>
-                <small>Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh.</small>
-            </div>
-
-            <div class="journal-entry-container col-sm-12 col-lg-6">
-                <img class="float-left" src="images/post-3.jpg">
-                <small class="date-published">sep 19, 2014  /  ıdentity</small>
-                <h6>Cursus Malesuada Justo</h4>
-                <small>Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh.</small>
-            </div>
-
-            <div class="journal-entry-container col-sm-12 col-lg-6">
-                <img class="float-left" src="images/post-4.jpg">
-                <small class="date-published">sep 27, 2014  /  Brandıng</small>
-                <h6>Ornare Cursus Bibendum Purus</h4>
-                <small>Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh.</small>
+    <div class="container">
+        <div id="journal" class="container journal-container">
+            <h3>From the Journal <em>- -</em></h3>
+            <lead>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla.</lead>
+            
+            <div class="row">
+                <div class="journal-entry-container col-sm-12 col-lg-6">
+                    <img class="float-left" src="images/post-1.jpg">
+                    <small class="date-published">Oct 13, 2014  /  ıdentity</small>
+                    <h6>Sollicitudin Tortor Inceptos</h4>
+                        <small>Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh.</small>
+                    </div>
+                    
+                    <div class="journal-entry-container col-sm-12 col-lg-6">
+                        <img class="float-left" src="images/post-2.jpg">
+                        <small class="date-published">Oct 23, 2014  /  Brandıng</small>
+                        <h6>Amet Inceptos Fringilla Fusce</h4>
+                        <small>Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh.</small>
+                    </div>
+                        
+                    <div class="journal-entry-container col-sm-12 col-lg-6">
+                        <img class="float-left" src="images/post-3.jpg">
+                        <small class="date-published">sep 19, 2014  /  ıdentity</small>
+                        <h6>Cursus Malesuada Justo</h4>
+                        <small>Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh.</small>
+                    </div>
+                            
+                    <div class="journal-entry-container col-sm-12 col-lg-6">
+                        <img class="float-left" src="images/post-4.jpg">
+                        <small class="date-published">sep 27, 2014  /  Brandıng</small>
+                        <h6>Ornare Cursus Bibendum Purus</h6>
+                        <small>Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh.</small>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-
-
-
-    <!-- Footer -->
-
-
-    <div class="container-fluid footer-container"> 
-        <div class="row d-inline">
-            <div class="col text-center align-items-center footer-content">
-                <h6>&copy 2014 Keepsake. All rights reserved. Theme by elemis.</h6>
-                <img src="images/social-logo-1.png">
-                <img src="images/social-logo-2.png">
-                <img src="images/social-logo-3.png">
-                <img src="images/social-logo-4.png">
-                <img src="images/social-logo-5.png">
+                              
+                        <!-- Footer -->
+                        
+                        
+                        <div class="container-fluid footer-container"> 
+                            <div class="row d-inline">
+                                <div class="col text-center align-items-center footer-content">
+                                    <h6>&copy 2014 Keepsake. All rights reserved. Theme by elemis.</h6>
+                                    <img src="images/social-logo-1.png">
+                                    <img src="images/social-logo-2.png">
+                                    <img src="images/social-logo-3.png">
+                                    <img src="images/social-logo-4.png">
+                                    <img src="images/social-logo-5.png">
             </div>
         </div>
     </div>
