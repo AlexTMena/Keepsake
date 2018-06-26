@@ -62,7 +62,9 @@ nav, nav ul li a {
     display: block;
 }
 nav ul li a:hover {
-    color: #808080;
+    color: #ffffff;
+    background: #808080;
+    border-radius: 3px;
 }
 
 .navbar-toggler-icon {
@@ -125,12 +127,19 @@ nav ul li a:hover {
     ========================= */
 
         .portfolio-container {
-            padding: 10px 0;
+            padding: 10px 0 50px;
         }
 
         .portfolio-container .img-fluid {
             height: 100%;
             padding: 5px;
+            transition: .5s;
+        }
+
+        .portfolio-container .img-fluid:hover {
+            padding: 0px;
+            box-shadow: 10px 10px 5px;
+            cursor: pointer;
         }
     
     /* ======================
@@ -181,6 +190,7 @@ nav ul li a:hover {
     height: 100px;
     width: 100px;
     border-radius: 50%;
+    transition: 1s;
 }
 
 .services-container h4 {
@@ -188,10 +198,19 @@ nav ul li a:hover {
     color: #404040;
 }
 
-.services-logo-container:hover {
+.logo-container:hover .services-logo-container {
     width: 150px;
     height: 150px;
-    font-size: 20px;
+    box-shadow: 3px 3px 5px #404040;
+}
+
+.logo-container:hover img, {
+    width: 100px;
+    height: 100px;
+}
+
+.logo-container:hover h4 {
+    font-weight: bold;
 }
 
 /* 
@@ -222,6 +241,11 @@ nav ul li a:hover {
 .journal-container h6 {
     color: #404040;
     text-transform: uppercase;
+}
+
+.journal-entry-container:hover {
+    cursor: pointer;
+    box-shadow: 1px 1px 1px;
 }
 
 /* 

@@ -91,7 +91,32 @@
 
         <div id="contact" class="container recruit-container text-center align-items-center">
             <h3>Would you love to work with us?</h3>
-            <button class="btn"><img class="" src="images/message-small.png"> Contact Us</button>
+            <button class="btn" data-toggle="modal" data-target="#recruitModal"><img class="" src="images/message-small.png"> Contact Us</button>
+            <div class="modal fade" id="recruitModal" tabindex="-1" role="dialog" aria-labelledby="recruitModalTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4>Contact Us</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group text-left">
+                                    <label for="clientName">Name</label>
+                                    <input type="text" placeholder="First Name Last Name" id="clientName">
+                                </div>
+                                <div class="form-group">
+                                    <label for="clientMessage">Message</label>
+                                    <textarea class="form-control" id="clientMessage" rows="5"></textarea>
+                                </div>
+                                <button type="submit" class="btn" data-dismiss="modal">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -104,7 +129,7 @@
             <h3>What do we do <em>- -</em></h3>
             <lead>Maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</lead>
 
-            <div class="row">
+            <div class="row align-items-center">
                 
                 <div class="col-sm-12 col-md-6 col-lg-3 text-center">
                     <div class="logo-container">
@@ -206,7 +231,7 @@
                         <div class="container-fluid footer-container"> 
                             <div class="row d-inline">
                                 <div class="col text-center align-items-center footer-content">
-                                    <h6>&copy 2014 Keepsake. All rights reserved. Theme by elemis.</h6>
+                                    <h6>&copy; 2014 Keepsake. All rights reserved. Theme by elemis.</h6>
                                     <img src="images/social-logo-1.png">
                                     <img src="images/social-logo-2.png">
                                     <img src="images/social-logo-3.png">
