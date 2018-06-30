@@ -1,4 +1,6 @@
-// filter option
+//////////////// filter option/////////////////////
+
+    var showPortfolio = 0;
 
     function filterAll() {
 
@@ -27,6 +29,9 @@
         sPrintDesign.classList.remove('active');
         sLogoDesign.classList.remove('active');
         sWebDesign.classList.remove('active');
+
+        showPortfolio = 0
+        console.log(showPortfolio)
     }
 
     function filterPrintDesign() {
@@ -58,6 +63,9 @@
         sLogoDesign.classList.remove('active');
         sWebDesign.classList.remove('active');
 
+        showPortfolio = 1
+
+        console.log(showPortfolio)
     }
 
     function filterLogoDesign() {
@@ -87,6 +95,10 @@
         sAll.classList.remove('active');
         sPrintDesign.classList.remove('active');
         sWebDesign.classList.remove('active');
+    
+        showPortfolio = 2
+
+        console.log(showPortfolio)
     }
 
     function filterWebDesign() {
@@ -116,4 +128,46 @@
         sAll.classList.remove('active');
         sPrintDesign.classList.remove('active');
         sLogoDesign.classList.remove('active');
+        
+        showPortfolio = 3
+
+        console.log(showPortfolio)
+    }
+
+
+    ////////////////////MODAL SETTINGS//////////////////
+
+    function closeModal() {
+        var closeLightbox = document.getElementById('lightbox-modal');
+        closeLightbox.classList.add('display-none')
+    }
+
+
+    ////////////////////// Picture per click
+
+    function showModal(forAll,forFiltered) {
+
+        var lightboxElem = document.getElementById('lightbox-modal');
+        lightboxElem.classList.remove('display-none');
+        
+        if (showPortfolio == 0) {
+            var imgList = document.getElementById("protfolioHandler").children;
+            var imgattrb = imgList[forAll].getAttribute('src');
+            document.getElementById('disModal').setAttribute('src',imgattrb);
+        }
+        if (showPortfolio == 1) {
+            var imgList = document.getElementsByClassName("print-design");
+            var imgattrb = imgList[forFiltered].getAttribute('src');
+            document.getElementById('disModal').setAttribute('src',imgattrb);
+        }
+        if (showPortfolio == 2) {
+            var imgList = document.getElementsByClassName("logo-design");
+            var imgattrb = imgList[forFiltered].getAttribute('src');
+            document.getElementById('disModal').setAttribute('src',imgattrb);
+        }
+        if (showPortfolio == 3) {
+            var imgList = document.getElementsByClassName("web-design");
+            var imgattrb = imgList[forFiltered].getAttribute('src');
+            document.getElementById('disModal').setAttribute('src',imgattrb);
+        }
     }

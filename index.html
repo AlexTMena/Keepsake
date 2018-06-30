@@ -18,6 +18,7 @@
 </head>
 <body>
 
+    <p id="demo"></p>
     <!-- navigation bar -->
 
     <div id="home" class="container">
@@ -75,16 +76,28 @@
 
         <!-- Portfolio sample -->
         
-        <div class="portfolio-container row text-center">
-            <img class="img-fluid col col-sm-12 col-md-4 ml-auto mr-auto print-design" src="images/portfolio-1.jpg">
-            <img class="img-fluid col col-sm-12 col-md-4 ml-auto mr-auto logo-design" src="images/portfolio-2.jpg">
-            <img class="img-fluid col col-sm-12 col-md-4 ml-auto mr-auto print-design" src="images/portfolio-3.jpg">
-            <img class="img-fluid col col-sm-12 col-md-4 ml-auto mr-auto print-design" src="images/portfolio-4.jpg">
-            <img class="img-fluid col col-sm-12 col-md-4 ml-auto mr-auto web-design" src="images/portfolio-5.jpg">
-            <img class="img-fluid col col-sm-12 col-md-4 ml-auto mr-auto print-design" src="images/portfolio-6.jpg">
-            <img class="img-fluid col col-sm-12 col-md-4 ml-auto mr-auto logo-design" src="images/portfolio-7.jpg">
-            <img class="img-fluid col col-sm-12 col-md-4 ml-auto mr-auto web-design" src="images/portfolio-8.jpg">
-            <img class="img-fluid col col-sm-12 col-md-4 ml-auto mr-auto logo-design" src="images/portfolio-9.jpg">
+        <div id="protfolioHandler" class="portfolio-container row text-center">
+            <img onclick="showModal(0,0)" class="img-fluid all col col-sm-12 col-md-4 ml-auto mr-auto print-design" src="images/portfolio-1.jpg">
+            <img onclick="showModal(1,0)" class="img-fluid all col col-sm-12 col-md-4 ml-auto mr-auto logo-design" src="images/portfolio-2.jpg">
+            <img onclick="showModal(2,1)" class="img-fluid all col col-sm-12 col-md-4 ml-auto mr-auto print-design" src="images/portfolio-3.jpg">
+            <img onclick="showModal(3,2)" class="img-fluid all col col-sm-12 col-md-4 ml-auto mr-auto print-design" src="images/portfolio-4.jpg">
+            <img onclick="showModal(4,0)" class="img-fluid all col col-sm-12 col-md-4 ml-auto mr-auto web-design" src="images/portfolio-5.jpg">
+            <img onclick="showModal(5,3)" class="img-fluid all col col-sm-12 col-md-4 ml-auto mr-auto print-design" src="images/portfolio-6.jpg">
+            <img onclick="showModal(6,1)" class="img-fluid all col col-sm-12 col-md-4 ml-auto mr-auto logo-design" src="images/portfolio-7.jpg">
+            <img onclick="showModal(7,1)" class="img-fluid all col col-sm-12 col-md-4 ml-auto mr-auto web-design" src="images/portfolio-8.jpg">
+            <img onclick="showModal(8,2)" class="img-fluid all col col-sm-12 col-md-4 ml-auto mr-auto logo-design" src="images/portfolio-9.jpg">
+        </div>
+
+        <!-- lightbox-modal -->
+
+        <div id="lightbox-modal" class="container-fluid display-none">
+            <div class="lightbox-content row align-items-center justify-content-center">
+                <img id="disModal" src="">
+            </div>
+            
+            <span id="closeLightbox" onclick="closeModal()" class="text-center close-button">&times;</span>
+            <a class="prev text-center">&#10094;</a>
+            <a class="next text-center">&#10095;</a>
         </div>
 
         <!-- Recruit -->
@@ -195,32 +208,32 @@
             
             <div class="row">
                 <div class="journal-entry-container col-sm-12 col-lg-6">
-                    <img class="float-left" src="images/post-1.jpg">
+                    <img class="float-left img-fluid" src="images/post-1.jpg">
                     <small class="date-published">Oct 13, 2014  /  ıdentity</small>
                     <h6>Sollicitudin Tortor Inceptos</h4>
                         <small>Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh.</small>
-                    </div>
+                </div>
                     
-                    <div class="journal-entry-container col-sm-12 col-lg-6">
-                        <img class="float-left" src="images/post-2.jpg">
-                        <small class="date-published">Oct 23, 2014  /  Brandıng</small>
-                        <h6>Amet Inceptos Fringilla Fusce</h4>
-                        <small>Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh.</small>
-                    </div>
+                <div class="journal-entry-container col-sm-12 col-lg-6">
+                    <img class="float-left img-fluid" src="images/post-2.jpg">
+                    <small class="date-published">Oct 23, 2014  /  Brandıng</small>
+                    <h6>Amet Inceptos Fringilla Fusce</h4>
+                    <small>Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh.</small>
+                </div>
+                    
+                <div class="journal-entry-container col-sm-12 col-lg-6">
+                    <img class="float-left img-fluid" src="images/post-3.jpg">
+                    <small class="date-published">sep 19, 2014  /  ıdentity</small>
+                    <h6>Cursus Malesuada Justo</h4>
+                    <small>Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh.</small>
+                </div>
                         
-                    <div class="journal-entry-container col-sm-12 col-lg-6">
-                        <img class="float-left" src="images/post-3.jpg">
-                        <small class="date-published">sep 19, 2014  /  ıdentity</small>
-                        <h6>Cursus Malesuada Justo</h4>
-                        <small>Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh.</small>
-                    </div>
-                            
-                    <div class="journal-entry-container col-sm-12 col-lg-6">
-                        <img class="float-left" src="images/post-4.jpg">
-                        <small class="date-published">sep 27, 2014  /  Brandıng</small>
-                        <h6>Ornare Cursus Bibendum Purus</h6>
-                        <small>Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh.</small>
-                    </div>
+                <div class="journal-entry-container col-sm-12 col-lg-6">
+                    <img class="float-left img-fluid" src="images/post-4.jpg">
+                    <small class="date-published">sep 27, 2014  /  Brandıng</small>
+                    <h6>Ornare Cursus Bibendum Purus</h6>
+                    <small>Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh.</small>
+                </div>
                 </div>
             </div>
         </div>
