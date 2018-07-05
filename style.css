@@ -56,10 +56,9 @@ h3 {
 nav, nav ul li a {
     font-family: 'Barlow Condensed', sans-serif;
     color: #404040;
-    font-weight: 550;
+    font-weight: 500;
     text-transform: uppercase;
     background-color: #ffffff;
-    display: block;
 }
 nav ul li a:hover {
     color: #808080;

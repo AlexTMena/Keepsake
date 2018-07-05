@@ -1,6 +1,12 @@
 //////////////// filter option/////////////////////
 
     var showPortfolio = 0;
+    var forAll = "";
+    var forFiltered = "";
+    var nextBtn = "";
+    var imgList= "";
+    var imgattrb = "";
+    var nextBtnList = "";
 
     function filterAll() {
 
@@ -30,8 +36,7 @@
         sLogoDesign.classList.remove('active');
         sWebDesign.classList.remove('active');
 
-        showPortfolio = 0
-        console.log(showPortfolio)
+        showPortfolio = 0;
     }
 
     function filterPrintDesign() {
@@ -63,9 +68,7 @@
         sLogoDesign.classList.remove('active');
         sWebDesign.classList.remove('active');
 
-        showPortfolio = 1
-
-        console.log(showPortfolio)
+        showPortfolio = 1;
     }
 
     function filterLogoDesign() {
@@ -96,9 +99,7 @@
         sPrintDesign.classList.remove('active');
         sWebDesign.classList.remove('active');
     
-        showPortfolio = 2
-
-        console.log(showPortfolio)
+        showPortfolio = 2;
     }
 
     function filterWebDesign() {
@@ -129,9 +130,7 @@
         sPrintDesign.classList.remove('active');
         sLogoDesign.classList.remove('active');
         
-        showPortfolio = 3
-
-        console.log(showPortfolio)
+        showPortfolio = 3;
     }
 
 
@@ -149,25 +148,64 @@
 
         var lightboxElem = document.getElementById('lightbox-modal');
         lightboxElem.classList.remove('display-none');
-        
+      
         if (showPortfolio == 0) {
             var imgList = document.getElementById("protfolioHandler").children;
             var imgattrb = imgList[forAll].getAttribute('src');
             document.getElementById('disModal').setAttribute('src',imgattrb);
+            curPic = forAll;
+            nextBtnList = imgList;
+
         }
         if (showPortfolio == 1) {
             var imgList = document.getElementsByClassName("print-design");
             var imgattrb = imgList[forFiltered].getAttribute('src');
             document.getElementById('disModal').setAttribute('src',imgattrb);
+
+            curPic = forFiltered;
+            nextBtnList = imgList;
+            
         }
         if (showPortfolio == 2) {
             var imgList = document.getElementsByClassName("logo-design");
             var imgattrb = imgList[forFiltered].getAttribute('src');
             document.getElementById('disModal').setAttribute('src',imgattrb);
+
+            curPic = forFiltered;
+            nextBtnList = imgList;
         }
         if (showPortfolio == 3) {
             var imgList = document.getElementsByClassName("web-design");
             var imgattrb = imgList[forFiltered].getAttribute('src');
             document.getElementById('disModal').setAttribute('src',imgattrb);
+
+            curPic = forFiltered;
+            nextBtnList = imgList;
+        }
+}
+
+    function nextPic() {
+
+        if (curPic>=nextBtnList.length-1) {
+            curPic = 0;
+            var toPresentPic = nextBtnList[curPic].getAttribute('src');
+            document.getElementById('disModal').setAttribute('src', toPresentPic);
+        }   else {
+            curPic = curPic+1;
+            var toPresentPic = nextBtnList[curPic].getAttribute('src');
+            document.getElementById('disModal').setAttribute('src',toPresentPic);
+            }
+        }
+
+    function prevPic() {
+
+        if (curPic == 0) {
+            curPic = nextBtnList.length-1;
+            var toPresentPic = nextBtnList[curPic].getAttribute('src');
+            document.getElementById('disModal').setAttribute('src',toPresentPic);
+        } else {
+            curPic = curPic-1;
+            var toPresentPic = nextBtnList[curPic].getAttribute('src');
+            document.getElementById('disModal').setAttribute('src',toPresentPic);
         }
     }
